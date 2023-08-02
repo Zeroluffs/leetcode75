@@ -1,61 +1,41 @@
-class Stack {
-  constructor() {
-    this.items = [];
-  }
+import { Stack } from "./sharedcode/Stack.js";
 
-  push(element) {
-    this.items.push(element);
-  }
-  length() {
-    return this.items.length;
-  }
-
-  peek() {
-    return this.items[this.items.length - 1];
-  }
-  pop() {
-    if (this.items.length === 0) {
-      return "Underflow";
-    }
-    return this.items.pop();
-  }
-}
 let inputStr = "()[[]]{}(";
 let secondStr = "({}[])";
 console.log(checkValid(inputStr));
 function checkValid(inputStr) {
   let openStack = new Stack();
   for (let i = 0; i < inputStr.length; i++) {
-    if (openStack.length() === 0) {
+    if (openStack.Length() === 0) {
       if (inputStr[i] === ")" || inputStr[i] === "]" || inputStr[i] === "}") {
         return false;
       }
-      openStack.push(inputStr[i]);
+      openStack.Push(inputStr[i]);
     } else {
       if (inputStr[i] === "(" || inputStr[i] === "[" || inputStr[i] === "{") {
-        openStack.push(inputStr[i]);
+        openStack.Push(inputStr[i]);
       } else {
-        const topOpen = openStack.peek();
+        const topOpen = openStack.Peek();
         if (topOpen === "{") {
           if (inputStr[i] !== "}") {
             return false;
           }
-          openStack.pop();
+          openStack.Pop();
         }
         if (topOpen === "(") {
           if (inputStr[i] !== ")") {
             return false;
           }
-          openStack.pop();
+          openStack.Pop();
         }
         if (topOpen === "[") {
           if (inputStr[i] !== "]") {
             return false;
           }
-          openStack.pop();
+          openStack.Pop();
         }
       }
     }
   }
-  return openStack.length() <= 0;
+  return openStack.Length() <= 0;
 }
