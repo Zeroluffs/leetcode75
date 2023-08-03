@@ -1,6 +1,6 @@
 const sortedArray = [-1, 2, 3, 4, 5, 7, 8];
 
-function binarySearch(array, target, leftIndex, rightIndex) {
+export function binarySearch(array, target, leftIndex, rightIndex) {
   return search(array, target, leftIndex, rightIndex);
 }
 
