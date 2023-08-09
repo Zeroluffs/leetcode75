@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a40647a9-ab7d-4f73-9515-c60cf81b7c9a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/validAnagram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetCode75.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/binarySearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +67,7 @@
       <workItem from="1691260690114" duration="6000" />
       <workItem from="1691260701130" duration="21000" />
       <workItem from="1691364911623" duration="761000" />
-      <workItem from="1691594558862" duration="2808000" />
+      <workItem from="1691594558862" duration="3859000" />
     </task>
     <servers />
   </component>
