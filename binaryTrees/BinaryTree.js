@@ -80,6 +80,26 @@ class BinaryTree {
       }
     }
   }
+
+  Invert() {
+    let arrayQueue = [];
+    let arrayPrint = [];
+    arrayQueue.push(this.root);
+    while (arrayQueue.length) {
+      const current = arrayQueue.shift();
+      arrayPrint.push(current.value);
+      console.log(current.value);
+      if (current.left && current.right) {
+        arrayQueue.push(current.right);
+        arrayQueue.push(current.left);
+      } else if (current.left) {
+        arrayQueue.push(current.left);
+      } else if (current.right) {
+        arrayQueue.push(current.left);
+      }
+    }
+    console.log(arrayPrint);
+  }
 }
 
 let binaryTree = new BinaryTree();
@@ -91,4 +111,4 @@ binaryTree.Insert(3);
 binaryTree.Insert(6);
 binaryTree.Insert(9);
 
-binaryTree.LevelOrder(binaryTree.root);
+binaryTree.Invert();
